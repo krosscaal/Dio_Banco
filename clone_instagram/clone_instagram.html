@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="prt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Clone Instagram</title>
+    </head>
+    <body>
+        <main>
+        <div class="instagram-wrapper">
+            <div class="instagram-phone">
+                <img id="imagem" src="./imagens/instagram.png" alt="aguardando carregamento da imagem"> 
+                <!--<img src="./imagens/instagram-celular2.png" alt="foto-celular"> -->
+                <!--<div class="imagem">
+                    
+
+                </div>-->
+                
+            </div>
+        
+            <div class="instagram-logar">
+                <div class="group">
+                    <img src="./imagens/instagram-logo.png" class="instagram-logo" alt="instagram logo">
+                    <input type="text" class="campos-logar" placeholder="Telefone, nome de usuário ou email" maxlength="30" minlength="30">
+                    <input type="text" class="campos-logar" placeholder="Senha" maxlength="30" minlength="30">
+                    <button class="botom-entrar campos-logar" onclick="carregarImagem()" >Entrar</button>
+                    <p class="campos-logar">OU</p>
+                    <p><span class="facebook link-azul campos-logar">Entrar com o Facebook <br><br></span></p>
+                    <p><span class="esqueceu link-azul campos-logar">Esqueceu a senha?</span></p>
+                    
+
+                </div>
+                <div class="group">
+                    <p>Não tem conta? <span class="link-azul">Cadastre-se</span></p>
+                </div>
+                <div class="obtenha-app">
+                    <p class="get-app">Obtenha o aplicativo.</p>
+                    
+                    <div class="download">
+                        <img src="./imagens/apple-button.png" class="baixar" alt="botom apple store">
+                        <img src="./imagens/googleplay-button.png" class="baixar" alt="botom google play">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </main>
+        <footer><p>Clique no botão <span class="link-azul">Entrar</span> e veja o que acontece</p>
+            <p>Portugues (Brasil) @copy 2021 by/Kross</p></footer>
+    </body>
+    <script type="text/javascript">
+        
+        function carregarImagem(){
+            var xmlHttpRequest=new XMLHttpRequest();
+            var url = "https://dog.ceo/api/breeds/image/random"
+            xmlHttpRequest.open("GET",url,true);
+            xmlHttpRequest.onreadystatechange = function(){
+                if (xmlHttpRequest.readyState == 3){
+                    console.log('Carregando o conteudo');
+                }
+                if (xmlHttpRequest.readyState == 4){
+                    var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+                    console.log('Requisição Finalizada');
+                    console.log('Resultado da Requisição: '+jsonResponse);
+                    console.log('Resultado da Requisição: '+jsonResponse.message);
+                    var imgCelular = document.getElementById('imagem');
+                    imgCelular.src = jsonResponse.message; 
+                }
+            };
+            xmlHttpRequest.send(null);
+        }
+
+    </script>
+
+
+</html>

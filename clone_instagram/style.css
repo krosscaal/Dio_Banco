@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    
+}
+
+main{
+    width: 100%;
+    min-height: 100%;
+    /*background-color: rgb(243,243,243);*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+footer{
+    float: left;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: #808080;
+    font-size: 12px;
+    margin-top: 40px;
+}
+.instagram-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100%;
+    /*border: 3px solid;*/
+}
+.instagram-phone{
+    background-image:url(../clone_instagram/imagens/instagram-celular2.png);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-height: 45rem;
+}
+.instagram-phone img{
+    width: 50rem;
+    min-height: 34rem;
+}
+#imagem{
+    margin-left: 100px;
+    width: 245px;
+    height: 400px;
+}
+
+.instagram-logar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40%;
+    min-height: 34rem;
+
+}
+.instagram-logo{
+    height: 4rem;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+    
+}
+.botom-entrar{
+    background-color: #0095f6;
+    color: #ffffffff;
+    padding: 8px;
+    border-radius: 4px;    
+    
+}
+.group:nth-child(1){
+    min-height: 19rem;
+}
+.campos-logar{
+    width: 60%;
+    margin-top: 10px;
+    text-align: center;
+}
+.link-azul{
+    color: #0000CD;
+}
+.facebook{
+    align-items: center;
+    font-size: 13px;
+}
+.esqueceu{
+    font-size: 11px;
+    text-align: center;
+}
+.obtenha-app{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.get-app{
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.dowmload{
+    
+    display: inline-block;
+}
+.baixar{
+    width: 13rem;
+}
+
+/* media queries*/
+@media (max-width:1024px){
+    main{
+        width: 100%;
+        min-width: 70%;
+        display:flex;
+        float: left;
+    }
+    .instagram-phone{
+        background-image:url(../clone_instagram/imagens/instagram-celular2.png);
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40rem;
+        min-height: 45rem;
+      
+    }
+    #imagem{
+        margin-left: 130px;
+        width: 245px;
+        height: 280px;
+    }
+    
+    .instagram-logar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 40%;
+        min-height: 34rem;
+      
+    }
+
+}
+@media (max-width:800px){
+    main{
+        width: 100%;
+    }
+    .instagram-phone{
+        display: none;
+    }
+    .instagram-logar{
+        width: 100%;
+    }
+}
+@media (max-width: 650px){
+    body{
+        background-color: #ffffffff;
+    }
+    main{
+        width: 90%;
+    }
+    .instagram-phone {
+        display: none;
+    }
+    .instagram-logar{
+        width: 100%;
+    }
+}
