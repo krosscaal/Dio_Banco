@@ -39,7 +39,7 @@ public class Conta {
 
   @Override
   public String toString() {
-    final StringBuffer sb = new StringBuffer("Extrato Conta{");
+    final StringBuffer sb = new StringBuffer("Conta{");
     sb.append("agencia=").append(agencia);
     sb.append(", conta=").append(conta);
     sb.append(", cod_cliente=").append(cod_cliente);
