@@ -1,13 +1,17 @@
 package entities;
 
+import java.util.Objects;
+
 public class Conta {
 
+  /* Atributos */
   protected int agencia;
   protected int conta;
   protected int cod_cliente;
   protected double saldo = 0.0;
 
-  public Conta() {
+  /* métodos Construtores*/
+  public Conta() { //construtor sem atributos
   }
 
   public Conta(int agencia, int conta, int cod_cliente, double saldo) {
@@ -17,6 +21,7 @@ public class Conta {
     this.saldo = saldo;
   }
 
+  /* métodos getters && setters*/
   public int getAgencia() {
     return agencia;
   }
@@ -36,5 +41,21 @@ public class Conta {
   public void setSaldo(double saldo) {
     this.saldo = saldo;
   }
+
+
+  /* métodos adicionais*/
+
+  /* método saqque*/
+  public boolean saque(double valor){
+    if (valor <= this.saldo){
+      this.saldo -= valor;
+      return true;
+    }else return false;
+  }
+  /*deposito*/
+  public void deposito(double valor){
+    this.saldo += valor;
+  }
+
 
 }

@@ -14,7 +14,7 @@ public class P_juridica extends Conta {
 
   public P_juridica(int agencia, int conta, int cod_cliente, double saldo, boolean cartao, double limiteCartao) {
     super(agencia, conta, cod_cliente, saldo);
-    this.cartao = true;
+    this.cartao = cartao;
     this.limiteCartao = limiteCartao;
   }
 
@@ -35,7 +35,7 @@ public class P_juridica extends Conta {
   }
 
   public String toString() {
-    final StringBuffer sb = new StringBuffer("----- CONTA P. FISICA -----");
+    final StringBuffer sb = new StringBuffer("----- EXTRATO CONTA P. JURÍDICA -----");
     sb.append("\nAgencia =").append(agencia);
     sb.append(" Conta = ").append(conta);
     sb.append("\nCod. cliente=").append(cod_cliente);
