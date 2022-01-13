@@ -8,13 +8,14 @@ import utils.CountConta;
 
 public class MainBanco {
 
-  public static CountConta numInit = new CountConta();
-  public static ServicoImplement serv = new ServicoImplement();
-  //private static int numC;
+  //public static CountConta numInit = new CountConta();
+  //public static ServicoImplement serv = new ServicoImplement();
 
   public static void main(String[] args){
 
+    ServicoImplement serv = new ServicoImplement();
     Scanner sc = new Scanner(System.in);
+    CountConta numInit = new CountConta();
     List<P_fisica> listaPF = new ArrayList<>();
     List<P_juridica> listaPJ = new ArrayList<>();
     numInit.setCountContaPF(0);
@@ -172,6 +173,7 @@ public class MainBanco {
 
         case 7:
           op=0;
+          num=0;
           do {
             System.out.println("Extrato conta Pessoa Física (digite 1)");
             System.out.print("Extrato conta Pessoa Física (digite 2): ");
@@ -180,6 +182,11 @@ public class MainBanco {
             System.out.print("Número da Conta: ");
             num = sc.nextInt();
           }while (op!=1 && op!=2 && num > 0);
+          if(op==1){
+            serv.imprimeExtratoPF(op,num,listaPF);
+          }else {
+            serv.imprimeExtratoPJ(op,num,listaPJ);
+          }
 
       }
     } while (numMenu != 0);
